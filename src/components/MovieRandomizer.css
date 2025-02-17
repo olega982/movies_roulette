@@ -1,0 +1,93 @@
+.movie-randomizer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .labels{
+    font-size: 1.1rem;
+  color: #a0aec0;
+  text-shadow: 0 0 10px rgba(160, 174, 192, 0.3);
+  display: flex;
+  align-items: center;
+  }
+  .filters select,
+  .filters input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background-color: #2d3748;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .filters select:focus,
+  .filters input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e50914;
+  }
+  
+  .movie-randomizer button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .movie-randomizer button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  
+  .movie-randomizer button:hover {
+    background-color: #f40612;
+    transform: scale(1.05);
+  }
+  
+  .movie-randomizer button:hover::before {
+    top: -100%;
+    left: -100%;
+  }
+  
+  .movie-randomizer button:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 480px) {
+    .filters{
+      flex-direction: column;
+    }
+  }
