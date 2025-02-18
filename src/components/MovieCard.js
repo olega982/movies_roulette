@@ -9,6 +9,7 @@ const MovieCard = ({ movie }) => {
           alt={movie.title}
         />
       </div>
+
       <div className="movie-info">
         <h2>
           {movie.title} ({new Date(movie.release_date).getFullYear()})
@@ -28,17 +29,16 @@ const MovieCard = ({ movie }) => {
         <p className="movie-overview">{movie.overview}</p>
 
         {/* Links */}
-        <div className="movie-links">
-          <iframe
-            width="460"
-            height="280"
-            src={`https://www.youtube.com/embed/${movie.trailer}`}
-            title="YouTube trailer"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <iframe
+          className="movie-links"
+          width="460"
+          height="280"
+          src={`https://www.youtube.com/embed/${movie.trailer}`}
+          title="YouTube trailer"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   );

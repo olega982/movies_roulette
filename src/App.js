@@ -11,7 +11,7 @@ function App() {
           <br />
           ⭐️ Only the best movies with the 7+ raiting.
           <br />
-          💬 At lest 100 reviews for every film.
+          💬 At lest 500 reviews for every film.
           <br />
         </p>
       </header>

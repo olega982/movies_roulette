@@ -132,8 +132,31 @@
     .movie-card{
       flex-direction: column;
     }
-    .movie-info h2{
-      font-size: 1.5rem;
+    .movie-card h2{
+      font-size: 1.3rem;
+      order:1;
+      text-align: center;
+    }
+    .movie-poster {
+      order: 2; /* Переместить постер ниже */
+      flex: 0 0 auto; /* Сбросить фиксированную ширину */
+      max-width: 200px; /* Уменьшить постер */
+      align-self: center;
+    }
+  
+    .movie-poster img {
+      width: 100%; 
+      height: auto; /* Сохранить пропорции без обрезки */
+    }
+  
+    .movie-info {
+      order: 3; /* Переместить текст наверх */
+      text-align: center; /* Центрируем текст */
+      padding: 1rem;
+    }
+    .movie-links{
+      width:100%;
+      height: 100%;
     }
   }
   

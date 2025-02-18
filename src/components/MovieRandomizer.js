@@ -71,7 +71,7 @@ const MovieRandomizer = () => {
           `primary_release_date.lte=${endDate}&` +
           `sort_by=popularity.desc&` +
           "vote_average.gte=7&" +
-          `vote_count.gte=100&` +
+          `vote_count.gte=500&` +
           `page=${bestPage}`
       );
       const pageData = await pageRes.json();
@@ -117,6 +117,7 @@ const MovieRandomizer = () => {
       setIsLoading(false);
     }
   };
+
   const content = error ? (
     "Sorry, no films to offer, try another filters"
   ) : (
