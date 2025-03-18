@@ -8,6 +8,7 @@ dotenv.config()
 module.exports = defineConfig({
   timeout: 30000, // Global timeout for each test
   use: {
+    trace: 'on',
     headless: true, // Run tests in headless mode
     viewport: { width: 1280, height: 720 }, // Default viewport for desktop
     actionTimeout: 10000, // Timeout for actions like clicks and fills

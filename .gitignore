@@ -11,7 +11,7 @@
 /playwright-report
 
 #keys
-/.env
+.env
 
 # production
 /build
