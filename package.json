@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:ci": "react-scripts start &",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test --reporter=html"
   },
   "eslintConfig": {
     "extends": [

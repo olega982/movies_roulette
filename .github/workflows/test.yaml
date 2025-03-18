@@ -30,6 +30,9 @@ jobs:
         env:
           REACT_APP_TMDB_KEY: ${{ secrets.REACT_APP_TMDB_KEY }}
 
+      - name: Ensure Playwright report is generated
+         run: ls -la playwright-report
+         
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
