@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:e2e": "playwright test",
-    "ci:test": "start-server-and-test start http://[::1]:3000/ test:e2e --timeout 60000"
+    "ci:test": "start-server-and-test start http://localhost:3000/movies_roulette test:e2e --timeout 60000"
   },
   "eslintConfig": {
     "extends": [
