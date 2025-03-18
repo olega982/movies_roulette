@@ -1,8 +1,8 @@
-import "./MovieCard.css";
+import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
   return (
-    <div className="movie-card">
+    <div className="movie-card" testId="movieCard">
       <div className="movie-poster">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -11,24 +11,26 @@ const MovieCard = ({ movie }) => {
       </div>
 
       <div className="movie-info">
-        <h2>
+        <h2 testId="movieTitle">
           {movie.title} ({new Date(movie.release_date).getFullYear()})
         </h2>
-        <div className="movie-genres">
+        <div className="movie-genres" testId="movieGenres">
           {movie.genre_names.map((genre) => (
             <span key={genre} className="genre-tag">
               {genre}
             </span>
           ))}
         </div>
-        <div className="movie-rating">
+        <div>
           <span className="star">⭐</span>
-          <span>{movie.vote_average.toFixed(1)}/10</span>
-          <span className="vote-count">({movie.vote_count} votes)</span>
+          <span testId="movieRating" className="movie-rating">
+            {movie.vote_average.toFixed(1)}/10
+          </span>
+          <span className="vote-count" testId="voteCount">
+            ({movie.vote_count} votes)
+          </span>
         </div>
         <p className="movie-overview">{movie.overview}</p>
-
-        {/* Links */}
         <iframe
           className="movie-links"
           width="460"
@@ -41,7 +43,7 @@ const MovieCard = ({ movie }) => {
         ></iframe>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MovieCard;
+export default MovieCard

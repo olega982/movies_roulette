@@ -1,13 +1,13 @@
-import MovieRandomizer from "./components/MovieRandomizer";
-import "./styles/App.css";
+import MovieRandomizer from './components/MovieRandomizer'
+import './styles/App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" testId="pageHeader">
         <h1>Movie Roulette</h1>
         <p className="App-description">
-          🎬 Dont know what to watch? Select genre, year and we will recommend!{" "}
+          🎬 Dont know what to watch? Select genre, year and we will recommend!{' '}
           <br />
           ⭐️ Only the best movies with the 7+ raiting.
           <br />
@@ -34,7 +34,7 @@ function App() {
         </nav>
       </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
