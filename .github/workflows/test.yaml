@@ -19,10 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
       - name: Run Playwright tests
         run: npm run ci:test
         env:
           REACT_APP_TMDB_KEY: ${{ secrets.REACT_APP_TMDB_KEY }}
+
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
