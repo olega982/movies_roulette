@@ -22,8 +22,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: Start server
+        run: npm run start:ci & npx wait-on http://localhost:3000/movies_roulette
+
       - name: Run Playwright tests
-        run: npm run ci:test
+        run: npm run test:e2e
         env:
           REACT_APP_TMDB_KEY: ${{ secrets.REACT_APP_TMDB_KEY }}
 

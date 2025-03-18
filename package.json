@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:e2e": "playwright test",
-    "ci:test": "start-server-and-test start http://127.0.0.1:3000/movies_roulette test:e2e --timeout 60000"
+    "start:ci": "react-scripts start &",
+    "test:e2e": "playwright test"
   },
   "eslintConfig": {
     "extends": [
